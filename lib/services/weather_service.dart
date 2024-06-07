@@ -10,8 +10,9 @@ class WeatherService {
     try {
       Response response = await dio.get(
           '${Constans.baseUrl}/forecast.json?key=${Constans.apiKey}&q=$cityName&days=1');
+      Map josnData = response.data;
 
-      WeatherModel weatherModel = WeatherModel.fromJson(response.data);
+      WeatherModel weatherModel = WeatherModel.fromJson(josnData);
       return weatherModel;
     } on DioException catch (e) {
       final String errMessage =
