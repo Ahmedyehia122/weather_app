@@ -1,8 +1,21 @@
 import 'package:bloc/bloc.dart';
+import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
+import 'package:weather_app/models/weather_model.dart';
+import 'package:weather_app/services/weather_service.dart';
 
 part 'get_wheather_state.dart';
 
 class GetWheatherCubit extends Cubit<GetWheatherState> {
-  GetWheatherCubit() : super(NoWheatherState());
+  GetWheatherCubit() : super(WheatherInitialState());
+  late WeatherModel weatherModel;
+  getWheather({required String cityName}) async {
+    try {
+      weatherModel =
+          await WeatherService(Dio()).getCurrentWeather(cityName: cityName);
+      emit(WheatherLoadedState());
+    } catch (e) {
+      emit(WheatherFailedState(errMessage: e.toString()));
+    }
+  }
 }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/cubits/get_wheather/get_wheather_cubit.dart';
 import 'package:weather_app/views/search_view.dart';
+import 'package:weather_app/widgets/noweather_body.dart';
 import 'package:weather_app/widgets/weather_info_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -20,6 +23,20 @@ class HomeView extends StatelessWidget {
                 icon: const Icon(Icons.search))
           ],
         ),
-        body: const WeatherInfoBody());
+        body: BlocBuilder<GetWheatherCubit, GetWheatherState>(
+          builder: (context, state) {
+            if (state is WheatherInitialState) {
+              return const NoWeatherBody();
+            } else if (state is WheatherLoadedState) {
+              return WeatherInfoBody(
+              
+              );
+            } else if (state is WheatherFailedState) {
+              return Center(child: Text(state.errMessage));
+            } else {
+              return const Center(child: Text('Error'));
+            }
+          },
+        ));
   }
 }
