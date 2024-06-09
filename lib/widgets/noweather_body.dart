@@ -13,11 +13,11 @@ class NoWeatherBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'There is no weather...',
+              'There is no weather...😊',
               style: styles.fontsize30,
             ),
             Text(
-              'Searching now...',
+              'Searching now...🔎',
               style: styles.fontsize30,
             ),
           ],

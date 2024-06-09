@@ -37,17 +37,16 @@ class WeatherInfoBody extends StatelessWidget {
               height: 10,
             ),
             Text(
-                'updated at ${weatherModel.date.hour} : ${weatherModel.date.minute}'),
+                'updated at ${weatherModel.date.day} / ${weatherModel.date.month} /${weatherModel.date.year}'),
             const SizedBox(
               height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // Image.asset(imagesPath.sunnyWeather, height: 60),
                 CachedNetworkImage(imageUrl: 'https:${weatherModel.image!}'),
                 Text(
-                  '${weatherModel.currentTemp}',
+                  '${weatherModel.currentTemp.round()}',
                   style: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.bold),
                 ),
