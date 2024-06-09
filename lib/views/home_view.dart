@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/core/constant/Strings.dart';
+import 'package:weather_app/core/constant/styles.dart';
 import 'package:weather_app/cubits/get_wheather/get_wheather_cubit.dart';
 import 'package:weather_app/views/search_view.dart';
 import 'package:weather_app/widgets/noweather_body.dart';
@@ -28,13 +30,19 @@ class HomeView extends StatelessWidget {
             if (state is WheatherInitialState) {
               return const NoWeatherBody();
             } else if (state is WheatherLoadedState) {
-              return WeatherInfoBody(
-              
-              );
+              return WeatherInfoBody();
             } else if (state is WheatherFailedState) {
-              return Center(child: Text(state.errMessage));
+              return Center(
+                  child: Text(
+                state.errMessage,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ));
             } else {
-              return const Center(child: Text('Error'));
+              return const Center(child: Text(Strings.customErrMessage));
             }
           },
         ));

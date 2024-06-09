@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/core/styles.dart';
+import 'package:weather_app/core/constant/styles.dart';
 
 class NoWeatherBody extends StatelessWidget {
   const NoWeatherBody({super.key});

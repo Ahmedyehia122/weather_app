@@ -1,7 +1,7 @@
 class WeatherModel {
   final String cityName;
   final String? image;
-  final String date;
+  final DateTime date;
   final double currentTemp;
   final double maxTemp;
   final double minTemp;
@@ -20,7 +20,7 @@ class WeatherModel {
     return WeatherModel(
         cityName: josn['location']['name'],
         image: josn['forecast']['forecastday'][0]['day']['condition']['icon'],
-        date: josn['forecast']['forecastday'][0]['date'],
+        date: DateTime.parse(josn['forecast']['forecastday'][0]['date']),
         currentTemp: josn['forecast']['forecastday'][0]['day']['avgtemp_c'],
         maxTemp: josn['forecast']['forecastday'][0]['day']['maxtemp_c'],
         minTemp: josn['forecast']['forecastday'][0]['day']['mintemp_c'],
