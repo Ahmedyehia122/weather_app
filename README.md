@@ -24,8 +24,29 @@ This simple app allows users to search for and view current weather conditions, 
   ## 💡 Dependencies
 
  ####  bloc: ^8.1.4
-   [flutter_bloc](https://pub.dev/packages/flutter_bloc) - Widgets that make it easy to integrate blocs and cubits into Flutter.
- #### provider: ^6.0.5
-   [provider](https://pub.dev/packages/provider) - A wrapper around InheritedWidget to make them easier to use and more reusable (State management).
+   [flutter_bloc](https://pub.dev/packages/flutter_bloc) - Widgets that make it easy to integrate blocs and cubits into Flutter(State management).
+ #### cached_network_image: ^3.3.1
+   [cached_network_image](https://pub.dev/packages/cached_network_image) - A flutter library to show images from the internet and keep 
+    them in the cache directory.
+ #### dio: ^5.4.3+1
+   [dio](https://pub.dev/packages/dio) - A powerful HTTP networking package for Dart/Flutter, supports Global configuration, Interceptors, FormData, Request cancellation, File uploading/downloading, Timeout, Custom adapters, Transformers, etc..
+
+
 
    <br/>
+   ## 🖊️ Contributing
+
+- Contributions are welcome 💜
+- If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+  <br/>
+ ## 🤝Contact With Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmedyehia122/) 
+[![Gmail](https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red)](https://www.ahmedyehia.122a@gmail.com)
+[![Facebook](https://img.shields.io/badge/Facebook-0077B5?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/profile.php?id=100033167761298)
+
+<br/>
+
+## 💖Support
+
