@@ -6,6 +6,10 @@ This simple app allows users to search for and view current weather conditions, 
  <br/>
 
   ## 🚀 Getting Started
+
+   <img src ="https://github.com/Ahmedyehia122/weather_app/assets/142153775/052cee07-7db3-4ae3-9319-1bfdb6338e6a" >
+ 
+   <br/>
   
    ## 📸 Screen Record
  
@@ -43,8 +47,7 @@ This simple app allows users to search for and view current weather conditions, 
  ## 🤝Contact With Me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmedyehia122/) 
-[![Gmail](https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red)](https://www.ahmedyehia.122a@gmail.com)
-[![Facebook](https://img.shields.io/badge/Facebook-0077B5?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/profile.php?id=100033167761298)
+ 
 
 <br/>
 
