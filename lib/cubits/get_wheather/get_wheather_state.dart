@@ -5,6 +5,8 @@ sealed class GetWheatherState {}
 
 final class WheatherInitialState extends GetWheatherState {}
 
+final class WheatherLoadingState extends GetWheatherState {}
+
 final class WheatherLoadedState extends GetWheatherState {}
 
 final class WheatherFailedState extends GetWheatherState {

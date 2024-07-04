@@ -11,13 +11,14 @@ class GetWheatherCubit extends Cubit<GetWheatherState> {
   GetWheatherCubit() : super(WheatherInitialState());
   WeatherModel? weatherModel;
   getWheather({required String cityName}) async {
+    emit(WheatherLoadingState());
+
     try {
       weatherModel =
           await WeatherService(Dio()).getCurrentWeather(cityName: cityName);
       emit(WheatherLoadedState());
     } catch (e) {
-      emit(WheatherFailedState(
-          errMessage: Strings.customErrMessage));
+      emit(WheatherFailedState(errMessage: Strings.customErrMessage));
     }
   }
 }
