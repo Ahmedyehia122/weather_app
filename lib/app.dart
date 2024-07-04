@@ -19,10 +19,11 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 home: const HomeView(),
                 theme: ThemeData(
-                    primarySwatch: getThemeColor(
-                        BlocProvider.of<GetWheatherCubit>(context)
-                            .weatherModel
-                            ?.weatherCondition)),
+                  primarySwatch: getThemeColor(
+                      BlocProvider.of<GetWheatherCubit>(context)
+                          .weatherModel
+                          ?.weatherCondition),
+                ),
               );
             },
           );
