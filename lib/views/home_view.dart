@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/core/constant/Strings.dart';
-import 'package:weather_app/core/constant/styles.dart';
 import 'package:weather_app/cubits/get_wheather/get_wheather_cubit.dart';
 import 'package:weather_app/views/search_view.dart';
+import 'package:weather_app/widgets/custom_loading_indicator.dart';
 import 'package:weather_app/widgets/noweather_body.dart';
+import 'package:weather_app/widgets/weather_failure_body.dart';
 import 'package:weather_app/widgets/weather_info_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -30,19 +31,17 @@ class HomeView extends StatelessWidget {
             if (state is WheatherInitialState) {
               return const NoWeatherBody();
             } else if (state is WheatherLoadedState) {
-              return WeatherInfoBody();
+              return const WeatherInfoBody();
             } else if (state is WheatherFailedState) {
-              return Center(
-                  child: Text(
-                state.errMessage,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ));
+              return WeatherFailureBody(
+                errMessage: state.errMessage,
+              );
+            } else if (state is WheatherLoadingState) {
+              return const CustomLoadingIndicator();
             } else {
-              return const Center(child: Text(Strings.customErrMessage));
+              return const Center(
+                child: Text(Strings.customErrMessage),
+              );
             }
           },
         ));
